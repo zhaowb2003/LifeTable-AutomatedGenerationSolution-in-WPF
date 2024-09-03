@@ -1,0 +1,85 @@
+﻿<Window x:Class="life_table_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:life_table_wpf"
+        mc:Ignorable="d"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        Title="MainWindow"
+        Width="905">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Menu>
+                <ui:MenuItem Header="文件" Icon="{ui:SymbolIcon DocumentSplitHint20}"></ui:MenuItem>
+                <Separator />
+                <ui:MenuItem Header="重置" Icon="{ui:SymbolIcon ArrowSync20}" x:Name="ResetButton"/>
+                <ui:MenuItem Header="新数据"  Icon="{ui:SymbolIcon Add20}" x:Name="NewData" Click="NewData_Click" />
+                <ui:MenuItem Header="保存" Icon="{ui:SymbolIcon Save20}" />
+                <ui:MenuItem Header="Debug" Icon="{ui:SymbolIcon Bug20}" Name="Debug_Button" Click="Debug_Button_Click"></ui:MenuItem>
+                <ui:MenuItem Header="绘图" Icon="{ui:SymbolIcon AlignBottom20}" Name="print_Button" Click="print_Button_Click"></ui:MenuItem>
+            </Menu>
+            <Grid Margin="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <StackPanel  Margin="12">
+                        <ui:TextBlock Text="请选择生命表形式: "></ui:TextBlock>
+                        <!--'凹线型','对角线型', '凸线型'-->
+                        <!--Concave line type, diagonal _line_type, convex line type-->
+                        <RadioButton Content="生命表-凹线型" GroupName="options" Name="Concave_line_type" IsChecked="True"/>
+                        <RadioButton Content="生命表-对角线型" GroupName="options" Name="Diagonal_line_type"/>
+                        <RadioButton Content="生命表-凸线型" GroupName="options" Name="Convex_line_type"/>
+
+                        <ui:TextBox PlaceholderText="请输入需要的样本数..." Name="Sample_size_Box"/>
+
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1">
+                <StackPanel >
+                    <Slider TickPlacement="Both" x:Name="Slider1" Minimum="1" Maximum="6" Value="3" IsSnapToTickEnabled="True" LargeChange="10" SmallChange="1" Orientation="Horizontal" />
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="100" Height="25" Margin="5" Text="输入判断数:"></TextBlock>
+                        <TextBlock x:Name="TextBlock1" Width="100" Height="25" Margin="5" Text="{Binding Path=Value, ElementName=Slider1}" />
+
+                    </StackPanel>
+                    <ui:TextBox Name="tbMultiLine" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"></ui:TextBox>
+                </StackPanel>
+            </Grid>
+            </Grid>
+        </StackPanel>
+            
+        <Grid Grid.Row="1">
+
+            <ui:DataGrid x:Name="DataGrid1" Margin="12" Padding="24" ScrollViewer.VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False">
+
+                
+                <!--<DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="Foreground" Value="Blue"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+                x   nx     lx     dx        qx     Lx      Tx        ex
+                -->
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="x" Width="100" Binding="{Binding x}"/>
+                    <DataGridTextColumn Header="nx" Width="100" Binding="{Binding nx}"/>
+                    <DataGridTextColumn Header="lx" Width="100" Binding="{Binding lx}"/>
+                    <DataGridTextColumn Header="dx" Width="100" Binding="{Binding dx}"/>
+                    <DataGridTextColumn Header="qx" Width="100" Binding="{Binding qx}"/>
+                    <DataGridTextColumn Header="Lx" Width="100" Binding="{Binding Lx}"/>
+                    <DataGridTextColumn Header="Tx" Width="100" Binding="{Binding Tx}"/>
+                    <DataGridTextColumn Header="ex" Width="100" Binding="{Binding ex}"/>
+                </DataGrid.Columns>
+            </ui:DataGrid>
+           
+        </Grid>
+    </Grid>
+</Window>
