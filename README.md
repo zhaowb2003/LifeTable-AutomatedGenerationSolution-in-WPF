@@ -18,10 +18,10 @@
 
 ## 🚀 运行LifeTable_WPF
 
-1. 点击右侧"release"链接 ➡️ 展开"Assets" ➡️ 点击"v1.01-LTW-net8.0-windows.zip"下载<br>
-   或者直接点击[这里](https://github.com/zhaowb2003/LifeTable-AutomatedGenerationSolution-in-WPF/releases/download/release/v1.01-LTW-net8.0-windows.zip)进行下载
+1. 点击右侧"release"链接 ➡️ 展开"Assets" ➡️ 点击"v1.1.0-LTW-net8.0-windows.zip"下载<br>
+   或者直接点击[这里](https://github.com/zhaowb2003/LifeTable-AutomatedGenerationSolution-in-WPF/releases/download/release/v1.1.0-LTW-net8.0-windows.zip)进行下载
 
-2. 点击进行解压，解压后在 📁 ./v1.01-LTW-net8.0-windows/net8.0-windows 📁 文件夹下找到 👨‍💻 life_table_wpf.exe 👨‍💻 ，双击运行。
+2. 点击进行解压，解压后在 📁 ./v1.0.0-LTW-net8.0-windows 📁 文件夹下找到 👨‍💻 start.bat 👨‍💻 ，双击运行。
 3. （打开成功请跳过此步）如果你的电脑没有安装.net 8.0 runtime，会有弹窗提示去微软官网 (https://dotnet.microsoft.com/zh-cn/download) 下载该运行时。
    <br>点击✅ ["下载.Net SDK x64"](https://dotnet.microsoft.com/zh-cn/download/dotnet/thank-you/sdk-8.0.401-windows-x64-installer) ✅<br>
    当下载完成后，找到下载好的运行时安装软件“dotnet-sdk-8.0.401-win-x64.exe”并双击安装。跟随步骤点击确定。待.Net SDK x64安装好后，重新双击步骤②中的👨‍💻 life_table_wpf.exe 👨‍💻运行。
@@ -34,5 +34,6 @@
 2. 在下方的“请输入需要的样本数...”中输入一个你喜欢的数字，我们推荐使用 1000 作为样本数。
 3. 滑动右侧的滑条，选择判断数。默认为“3”.
 4. 点击上方栏中的“ ➕ 新数据 ”按钮，下方的表格栏中出现内容。
-5. 点击上方栏中的“ 📊 绘图 ”按钮，弹出有拟合曲线图的新窗口。
-6. 点击有拟合曲线图的新窗口上方栏中的“ 💾 保存 ”按钮，保存图片。
+5. 点击窗口上方栏中的“ 💾 保存 ”按钮，保存表格为csv文件。
+6. 点击上方栏中的“ 📊 绘图 ”按钮，弹出有拟合曲线图的新窗口。
+7. 点击有拟合曲线图的新窗口上方栏中的“ 💾 保存 ”按钮，保存图片。
