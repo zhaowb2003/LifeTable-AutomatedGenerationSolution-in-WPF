@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
         Title="MainWindow"
-        Width="905">
+        Width="905"
+        Height="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -17,10 +18,10 @@
             <Menu>
                 <ui:MenuItem Header="文件" Icon="{ui:SymbolIcon DocumentSplitHint20}"></ui:MenuItem>
                 <Separator />
-                <ui:MenuItem Header="重置" Icon="{ui:SymbolIcon ArrowSync20}" x:Name="ResetButton"/>
+                <ui:MenuItem Header="重置" Icon="{ui:SymbolIcon ArrowSync20}" x:Name="ResetButton" Click="ResetButton_Click"/>
                 <ui:MenuItem Header="新数据"  Icon="{ui:SymbolIcon Add20}" x:Name="NewData" Click="NewData_Click" />
-                <ui:MenuItem Header="保存" Icon="{ui:SymbolIcon Save20}" />
-                <ui:MenuItem Header="Debug" Icon="{ui:SymbolIcon Bug20}" Name="Debug_Button" Click="Debug_Button_Click"></ui:MenuItem>
+                <ui:MenuItem Header="保存" Icon="{ui:SymbolIcon Save20}" Name="Save_Button" Click="Save_Button_Click"/>
+                <!--<ui:MenuItem Header="Debug" Icon="{ui:SymbolIcon Bug20}" Name="Debug_Button" Click="Debug_Button_Click"></ui:MenuItem>-->
                 <ui:MenuItem Header="绘图" Icon="{ui:SymbolIcon AlignBottom20}" Name="print_Button" Click="print_Button_Click"></ui:MenuItem>
             </Menu>
             <Grid Margin="12">
@@ -33,9 +34,9 @@
                         <ui:TextBlock Text="请选择生命表形式: "></ui:TextBlock>
                         <!--'凹线型','对角线型', '凸线型'-->
                         <!--Concave line type, diagonal _line_type, convex line type-->
-                        <RadioButton Content="生命表-凹线型" GroupName="options" Name="Concave_line_type" IsChecked="True"/>
-                        <RadioButton Content="生命表-对角线型" GroupName="options" Name="Diagonal_line_type"/>
-                        <RadioButton Content="生命表-凸线型" GroupName="options" Name="Convex_line_type"/>
+                        <RadioButton Content="生命表-凹线型" GroupName="options" Name="Concave_line_type" IsChecked="True" Click="Concave_line_type_Click"/>
+                        <RadioButton Content="生命表-对角线型" GroupName="options" Name="Diagonal_line_type" Click="Concave_line_type_Click"/>
+                        <RadioButton Content="生命表-凸线型" GroupName="options" Name="Convex_line_type" Click="Concave_line_type_Click"/>
 
                         <ui:TextBox PlaceholderText="请输入需要的样本数..." Name="Sample_size_Box"/>
 

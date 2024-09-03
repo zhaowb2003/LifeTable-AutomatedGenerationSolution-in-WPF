@@ -1,11 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
+using System.Text.Json;
+using System.Windows;
 using System.Diagnostics;
+/*
+
+using System;
+using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+
+*/
 
 namespace life_table_wpf
 {
@@ -93,12 +99,18 @@ namespace life_table_wpf
 				do
 				{
 					_once_num = OneTurn(killNumber[counter], _once_num);
+					// if (Rounds[counter] == roundCounter && roundCounter != Rounds[Rounds.Length - 1])
 					if (Rounds[counter] == roundCounter && roundCounter != Rounds[Rounds.Length - 1])
 					{
 						counter++;
 					}
+					if ( roundCounter == Rounds[Rounds.Length - 1])
+					{
+						MessageBox.Show("循环过长，请重新启动程序！");
+						Environment.Exit(0);
+					}
 					
-					Debug.WriteLine($"counter:{counter}, roundCounter:{roundCounter}, _once_num:{_once_num}");
+					Debug.WriteLine($"counter:{counter}, roundCounter:{roundCounter}, _once_num:{_once_num}, kill: {killNumber[counter]}");
 					myList.Add(_once_num);
 					roundCounter++;
 				}
