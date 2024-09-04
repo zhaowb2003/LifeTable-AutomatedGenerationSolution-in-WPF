@@ -2,13 +2,13 @@
 
 ## 目录
 
-- [🔍 这段程序有何用](https://github.com/zhaowb2003/LifeTable-AutomatedGenerationSolution-in-WPF/edit/master/README.md#-%E8%BF%99%E6%AE%B5%E7%A8%8B%E5%BA%8F%E6%9C%89%E4%BD%95%E7%94%A8)
+- [🔍 这段程序有何用](https://github.com/zhaowb2003/LifeTable-AutomatedGenerationSolution-in-WPF#-%E8%BF%99%E6%AE%B5%E7%A8%8B%E5%BA%8F%E6%9C%89%E4%BD%95%E7%94%A8)
   
-- [🔧 环境安装与依赖](https://github.com/zhaowb2003/LifeTable-AutomatedGenerationSolution-in-WPF/edit/master/README.md#-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BE%9D%E8%B5%96)
+- [🔧 环境安装与依赖](https://github.com/zhaowb2003/LifeTable-AutomatedGenerationSolution-in-WPF#-%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BE%9D%E8%B5%96)
   
-- [🚀 下载运行本程序](https://github.com/zhaowb2003/LifeTable-AutomatedGenerationSolution-in-WPF/edit/master/README.md#-%E4%B8%8B%E8%BD%BD%E8%BF%90%E8%A1%8C%E6%9C%AC%E7%A8%8B%E5%BA%8F)
+- [🚀 下载运行本程序](https://github.com/zhaowb2003/LifeTable-AutomatedGenerationSolution-in-WPF#-%E4%B8%8B%E8%BD%BD%E8%BF%90%E8%A1%8C%E6%9C%AC%E7%A8%8B%E5%BA%8F)
   
-- [💻 轻松绘制生命表](https://github.com/zhaowb2003/LifeTable-AutomatedGenerationSolution-in-WPF/edit/master/README.md#-%E8%BD%BB%E6%9D%BE%E7%BB%98%E5%88%B6%E7%94%9F%E5%91%BD%E8%A1%A8)
+- [💻 轻松绘制生命表](https://github.com/zhaowb2003/LifeTable-AutomatedGenerationSolution-in-WPF#-%E8%BD%BB%E6%9D%BE%E7%BB%98%E5%88%B6%E7%94%9F%E5%91%BD%E8%A1%A8)
 
 ## 🔍 这段程序有何用
 
