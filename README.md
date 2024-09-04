@@ -81,12 +81,20 @@
 }
 ```
 
-则程序行为如下 i = 0;
+则程序行为如下：
+
+程序初始化，i = 0;
+
 0-1回合，killNumber[i] == killNumber[0]  == 2；
+
 2回合时，Rounds[i] == 2 等于本回合数，因此i++，此时i == 1; 故killNumber[i] == killNumber[1] == 3;
+
 3回合 i == 1; Rounds[i] == Rounds[i] == 4; killNumber[i] == killNumber[1] == 3;
+
 4回合时，Rounds[i] == 4 等于本回合数，因此i++，此时i == 2; 故killNumber[i] == killNumber[1] == 4;
+
 ......
+
 30回合时，Rounds[i] == 30 等于本回合数，因此提示循环过长，退出程序。
 
 
